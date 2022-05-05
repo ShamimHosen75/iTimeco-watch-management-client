@@ -68,7 +68,7 @@ const NavBar = () => {
                             </Nav.Link>}
                             {user.email && <Nav.Link>
                                 <NavLink
-                                    to="/MangeBooklist"
+                                    to="/mangeBooklist"
                                     style={{ color: '#000', textDecoration: "none" }}
                                     activeStyle={{
                                         fontWeight: "bold",
