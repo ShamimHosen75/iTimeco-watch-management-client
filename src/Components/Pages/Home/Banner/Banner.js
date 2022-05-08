@@ -1,49 +1,87 @@
-import { Carousel } from 'bootstrap';
 import React from 'react';
-import slide1 from '../../../../images/slide/slide01.jpg';
-import slide2 from '../../../../images/slide/slide02.jpg';
-import slide3 from '../../../../images/slide/slide03.jpg';
-import slide4 from '../../../../images/slide/slide04.jpg';
-
+import { Carousel } from 'react-bootstrap';
+import Watch from '../../../../images/banner1.jpg';
+import Watch2 from '../../../../images/banner2.jpg';
+import Watch3 from '../../../../images/banner3.jpg';
+import './Banner.css';
 const Banner = () => {
-    // banner route
     return (
-        <div style={{maxHeight:'460px'}}>
-            <Carousel fade>
-                <Carousel.Item>
-                    <img
-                        style={{maxHeight: '460px'}}
-                        className="d-block h-100  w-100"
-                        src={slide1}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        style={{maxHeight: '460px'}}
-                        className="d-block h-100  w-100"
-                        src={slide2}
-                        alt="Second slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        style={{maxHeight: '460px'}}
-                        className="d-block h-100  w-100"
-                        src={slide3}
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        style={{maxHeight: '460px'}}
-                        className="d-block h-100  w-100"
-                        src={slide4}
-                        alt="Fourth slide"
-                    />
-                </Carousel.Item>
-            </Carousel>
+        <div width={800} height={450} alt="750x420">
+            <Carousel className='bg-dark'>
+        <Carousel.Item>
+            <img
+            className="d-block w-100"
+            src={Watch}
+            alt="First slide"
+            />
+            <Carousel.Caption>
+            <h3 className='text-warning'>Apple Watch {`&`} Series 6</h3>
+            <p>Featuring a Blood Oxygen sensor and app, new case finishes, and watchOS 7</p>
+            </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+            <img
+            className="d-block w-100"
+            src={Watch2}
+            alt="Second slide"
+            />
+
+            <Carousel.Caption>
+            <h3 className='text-warning'>Design and Performance</h3>
+            <p>The Blood Oxygen sensor employs LEDs, <br/> along with photo diodes on the back crystal of Apple Watch Series 6.</p>
+            </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+            <img
+            className="d-block w-100"
+            src={Watch3}
+            alt="Third slide"
+            />
+
+            <Carousel.Caption>
+            <h3 className='text-warning'>Blood Oxygen Sensor and App</h3>
+            <p>Apple Watch Series 6 offers its most colorful collection yet.</p>
+            </Carousel.Caption>
+        </Carousel.Item>
+        {/* <Carousel.Item>
+            <img
+            className="d-block w-100"
+            src={Apple4}
+            alt="Fourth slide"
+            />
+
+            <Carousel.Caption>
+            <h3 className='text-success'>Repair Your Devices</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+            <img
+            className="d-block w-100"
+            src={Apple5}
+            alt="Third slide"
+            />
+
+            <Carousel.Caption>
+            <h3 className='text-dark'>Repair Your Body Part</h3>
+            <p>Send your device in for repair and have the repair at Apple Doctor fix it</p>
+            </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+            <img
+            className="d-block w-100"
+            src={Apple6}
+            alt="Third slide"
+            />
+
+            <Carousel.Caption>
+            <h3>Repair Laptop</h3>
+            <p>Send your device in for repair and have the repair at Apple Doctor fix it</p>
+            </Carousel.Caption>
+        </Carousel.Item> */}
+        </Carousel>
         </div>
+        
     );
 };
 

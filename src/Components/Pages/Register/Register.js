@@ -4,25 +4,20 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
-const Login = () => {
+const Register = () => {
     const {
-        user,
         googleSignIn,
         getEmail,
         getPassword,
-        signInUsingEmail,
+        signUpUsingEmail,
         error,
         setUser,
         setError,
         setIsLoading
     } = useAuth();
     const location = useLocation()
-    const navigate = useNavigate()
-    const from = location.state?.from?.pathname || '/';
-
-    if(user){
-        navigate(from, { replace: true });
-    }
+    const history = useNavigate()
+    const redirect_url = location.state?.from || '/home';
     
     const handleEmail = (e) => {
         const email = e.target.value;
@@ -34,23 +29,25 @@ const Login = () => {
         getPassword(password);
     }
 
-    const handleGoogleLogin = () => {
+    const handleGoogleRegister = () => {
         googleSignIn()
             .then(result => {
                 const user = result.user;
                 setUser(user);
+                history.push(redirect_url);
             })
             .catch(error => {
                 setError(error.massage)
             })
             .finally(() => setIsLoading(false))
-    };
+    }
 
-    const handleEmailLogin = () => {
-        signInUsingEmail()
+    const handleEmailRegister = () => {
+        signUpUsingEmail()
             .then(result => {
                 const user = result.user;
                 setUser(user);
+                history.push(redirect_url);
             })
             .catch(error => {
                 setError(error.massage)
@@ -58,6 +55,7 @@ const Login = () => {
             .finally(() => setIsLoading(false))
     };
 
+    
     return (
         <div className="d-flex justify-content-center align-items-center my-5">
             <div style={{ boxShadow: "0px 0px 8px 0px #ddd" }} className=" text-center rounded-2 p-4">
@@ -66,7 +64,7 @@ const Login = () => {
                     className='d-flex justify-content-center align-items-center rounded-circle mx-auto'>
                     <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
                 </div>
-                <h4 className="my-3">Please Login</h4>
+                <h4 className="my-3">Please Register</h4>
                 <div>
                     <div class="form-floating mb-3">
                         <input onChange={handleEmail} style={{ width: '260px' }} type="email" class="form-control py-2 rounded-pill" id="floatingInput" placeholder="Your Email" />
@@ -79,24 +77,24 @@ const Login = () => {
                 </div>
                 <div>
                     <button
-                        onClick={handleEmailLogin}
+                        onClick={handleEmailRegister}
                         style={{ background: '#0077BB', outline: 'none', width: '260px' }}
                         className="btn mt-3 px-3 rounded-pill border-0 text-white">
-                        Login
+                        Register 
                     </button>
                 </div>
                 <span className="text-danger my-2">{error}</span><br />
-                <span className="mt-1">Don't have any Account? <Link to='/register'>Register</Link></span>
+                <span className="mt-1">All Ready have an Account? <Link to='/login'>Login</Link></span>
                 <h6 className="my-2">---Or---</h6>
                 <button
-                    onClick={handleGoogleLogin}
+                    onClick={handleGoogleRegister}
                     style={{ background: '#0077BB', outline: 'none', width: '260px' }}
                     className="btn px-2 rounded-pill border-0 text-white">
-                    Login With Google 
+                    Register With Google 
                 </button>
             </div>
         </div>
     );
 };
 
-export default Login;
+export default Register;

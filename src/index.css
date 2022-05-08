@@ -1,13 +1,56 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif;
 }
+
+.Services-img{
+  overflow: hidden;
+  
+}
+.Services-img img{
+  transition: 1s;
+}
+.Services-img:hover img{
+  transform: scaleX(1.2);
+}
+.doctor-card{
+ transition: all 1s;
+ cursor: pointer;
+}
+.doctor-details{
+  background: #0000005e;
+  height: 0%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: none;
+  transition: all 1s;
+  cursor: pointer;
+}
+.doctor-card:hover .doctor-details{
+  display: flex;
+  height: 100%;
+}
+.doctors-btn{
+  background-color: #ddd;
+  outline: none;
+  color: #666;
+  text-decoration: none;
+  transition: .4s;
+}
+
+
+
+.doctors-btn:hover{
+  background-color: #12C1AD; 
+  color: #fff;
+}
+

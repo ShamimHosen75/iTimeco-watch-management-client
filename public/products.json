@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Apple Watch SE",
+        "desc": "Apple Watch SE Smart Watch w/ Gold Aluminium Case with Starlight Sport Band. Fitness & Activity Tracker, Heart Rate Monitor, Retina Display, Water Resistant",
+        "supplier": "Roman",
+        "quantity": "10",
+        "price": "399",
+        "img": "https://i.ibb.co/3hzcH42/Apple-series-se.png"
+        },
+    {
+        "id": 2,
+        "name": "Xiaomi Haylou ",
+        "desc": "The new Haylou smartwatch differs from the previous model with a large touch screen.",
+        "supplier": "Noyon",
+        "quantity": "15",
+        "price": "39",
+        "img": "https://i.ibb.co/cQxSMVr/Amazfit-GTS2.png"
+        },
+    {
+        "id": 3,
+        "name": "Apple Watch Series ",
+        "desc": "Apple Watch Series  - Space Gray Aluminum Case with Black Sport Band",
+        "supplier": "Suvon",
+        "quantity": "21",
+        "price": "399",
+        "img": "https://i.ibb.co/RYtZFg3/Apple-series3.png"
+        },
+    {
+        "id": 4,
+        "name": "Realme DIZO Smart Watch ",
+        "desc": "The DIZO Smart Watch is easy to use, thanks to its full-touch display. Its brilliant screen allows you to see well even in direct sunlight. The central frame of this smartwatch is made of a strong zinc alloy.",
+        "supplier": "Amin",
+        "quantity": "13",
+        "price": "29",
+        "img": "https://i.ibb.co/QcDskYw/realme-watch.png"
+        },
+    {
+        "id": 5,
+        "name": "Galaxy-watch-ecg",
+        "desc": "SAMSUNG Galaxy Watch Smartwatch with ECG Monitor Tracker for Health Fitness Running Sleep Cycles GPS Fall Detection Bluetooth US Version, Pink Gold",
+        "supplier": "Nafy",
+        "quantity": "21",
+        "price": "199",
+        "img": "https://i.ibb.co/pxqrsLZ/galaxy-watch-ecg.png"
+        },
+        {
+            "id": 6,
+            "name": "Apple Watch Series ",
+            "desc": "Apple Watch Series  - Space Gray Aluminum Case with Black Sport Band",
+            "supplier": "Samiur",
+            "quantity": "25",
+            "price": "399",
+            "img": "https://i.ibb.co/dtDZtb0/Apple-series7.png"
+            },
+    {
+        "id": 7,
+        "name": "Galaxy Smart Watch ",
+        "desc": "Samsung Electronics Galaxy Watch  Classic Smartwatch with ECG Monitor Tracker for Health Fitness Running Sleep Cycles GPS Fall Detection Bluetooth US Version, Black",
+        "supplier": "Mehedi",
+        "quantity": "23",
+        "price": "199",
+        "img": "https://i.ibb.co/crzq2QX/galaxy-watch4.png"
+        }
+]
