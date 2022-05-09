@@ -32,7 +32,7 @@ const NavBar = () => {
                                     Home
                                 </NavLink>
                             </Nav.Link>
-                            <Nav.Link>
+                            {user.email && <Nav.Link>
                                 <NavLink
                                     to="/manageItems"
                                     style={{ color: '#fff', textDecoration: "none" }}
@@ -42,8 +42,8 @@ const NavBar = () => {
                                     }}>
                                     Manage Items
                                 </NavLink>
-                            </Nav.Link>
-                            <Nav.Link>
+                            </Nav.Link>}
+                           {user.email && <Nav.Link>
                                 <NavLink
                                     to="/addItems"
                                     style={{ color: '#fff', textDecoration: "none" }}
@@ -53,8 +53,8 @@ const NavBar = () => {
                                     }}>
                                     Add Items
                                 </NavLink>
-                            </Nav.Link>
-                            <Nav.Link>
+                            </Nav.Link>}
+                            {user.email && <Nav.Link>
                                 <NavLink
                                     to="/myItems"
                                     style={{ color: '#fff', textDecoration: "none" }}
@@ -64,7 +64,7 @@ const NavBar = () => {
                                     }}>
                                     My Items
                                 </NavLink>
-                            </Nav.Link>
+                            </Nav.Link>}
                             <Nav.Link>
                                 <NavLink
                                     to="/blog"

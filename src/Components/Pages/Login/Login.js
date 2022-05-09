@@ -81,7 +81,7 @@ const Login = () => {
                     <button
                         onClick={handleEmailLogin}
                         style={{ background: '#0077BB', outline: 'none', width: '260px' }}
-                        className="btn mt-3 px-3 rounded-pill border-0 text-white">
+                        className="btn mt-3 px-3 rounded-pill border-0 text-white">               
                         Login
                     </button>
                 </div>

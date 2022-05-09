@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Spinner } from 'react-bootstrap';
+import { Button, Container, Row, Spinner } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Product from '../Product/Product';
 const Products = () => {
 
@@ -9,7 +10,7 @@ const Products = () => {
 
 
     useEffect( () => {
-        fetch('http://localhost:5000/getProduct')
+        fetch('https://enigmatic-savannah-54985.herokuapp.com/getProduct')
                 .then (res => res.json())
                 .then (data => {
                     setProducts(data)
@@ -47,9 +48,17 @@ const Products = () => {
                             })
                         }
                     </Row>
+                    <Link to="/manageItems">
+                        <Button
+                            style={{ background: '#FFC107', outline: 'none', color: '#FFC107' }}
+                            className="bg-dark mt-5 rounded-pill border-0 px-4 "
+                        >
+                            Manage Items
+                        </Button>
+                    </Link>
                 </Container>
             </div>
-    );
+        );
   }
 };
 

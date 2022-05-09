@@ -1,7 +1,7 @@
 import { faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Col, Container, Form, Row, Button} from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Contact = () => {
@@ -33,9 +33,9 @@ const Contact = () => {
                             </Form>
                             <Button
                                 style={{ background: '#12C1AD', outline: 'none' }}
-                                className="rounded-pill border-0 px-4 ">
+                                className=" bg-dark rounded-pill border-0 px-4 ">
                                 <Link
-                                    style={{ color: '#fff', textDecoration: "none" }}
+                                    style={{ color: '#FFC107', textDecoration: "none" }}
                                     to='/welldone'>
                                     Send Message
                                 </Link>

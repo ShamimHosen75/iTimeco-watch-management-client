@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Col, Container, Row, Button } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import { Link, useParams } from 'react-router-dom';
 // import axios from 'axios';
 // import useAuth from '../../../Hooks/useAuth';
 
@@ -12,7 +12,7 @@ const ProductDetails = () => {
     const [delivered, setDelivered] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/inventory/${id}`)
+        fetch(`https://enigmatic-savannah-54985.herokuapp.com/inventory/${id}`)
             .then(res => res.json())
             .then(data => {
                 setDelivered(false);
@@ -23,7 +23,7 @@ const ProductDetails = () => {
     const deliveredProduct = () => {
         let target = parseInt(displayProduct.quantity);
         displayProduct.quantity = target - 1;
-        fetch(`http://localhost:5000/deliveredProduct/${id}`, {
+        fetch(`https://enigmatic-savannah-54985.herokuapp.com/deliveredProduct/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(displayProduct)
@@ -40,7 +40,7 @@ const ProductDetails = () => {
     const onSubmit = data => {
         let target = parseInt(displayProduct.quantity);
         displayProduct.quantity = target + parseInt(data.newQuantity);
-        fetch(`http://localhost:5000/deliveredProduct/${id}`, {
+        fetch(`https://enigmatic-savannah-54985.herokuapp.com/deliveredProduct/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(displayProduct)
@@ -88,6 +88,14 @@ const ProductDetails = () => {
                             </form>
                         </Col>
                     </Row>
+                    <Link to="/manageItems">
+                        <Button
+                            style={{ background: '#12C1AD', outline: 'none', color: '#fff' }}
+                            className="rounded-pill border-0 px-4 "
+                        >
+                            Manage Items
+                        </Button>
+                    </Link>
                 </Container>
             </div>
         </>
