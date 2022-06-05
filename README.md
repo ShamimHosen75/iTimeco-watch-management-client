@@ -1,7 +1,7 @@
 # iTimeco-watch Warehourse Management. (Responsive)
 This is a Digital or Modern Fitness Training website
 
-# Live Site Link  Firebase ===> https://itimeco-watch.web.app/
+# Live Site Link ===> https://itimeco-watch.web.app/
 # Live Site Link Netlify ===> https://itimeco-watch.netlify.app/
 ## Functionalist Of this site
 - It's a smartwatch related website.
