@@ -1,4 +1,4 @@
-# iTimeco-watch Warehourse Website. (Responsive)
+# iTimeco-watch Warehourse Management. (Responsive)
 This is a Digital or Modern Fitness Training website
 
 Live Site Link  Firebase ===> https://itimeco-watch.web.app/
