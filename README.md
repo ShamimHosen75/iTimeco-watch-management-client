@@ -1,10 +1,10 @@
 # SAM FITNESS CENTER. (responsive)
 This is a Digital or Modern Fitness Training website
 
-Live Site Link  Firebase ===> https://samfitnessc.web.app
-Live Site Link Netlify ===> https://sam-fitness.netlify.app/
+Live Site Link  Firebase ===> https://itimeco-watch.web.app
+Live Site Link Netlify ===> https://itimeco-watch.netlify.app/
 ## Functionalist Of this site
-- It's a gymnasium related website.
+- It's a smartwatch related website.
 - I used React-Bootstrap as a framework to create this website.
 - There are total 4 section in The Home page.
 - If you Logged in you can see the details about the services and Fitness services.
